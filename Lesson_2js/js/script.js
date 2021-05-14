@@ -31,7 +31,25 @@
 // alert(`Number of files to move: ${(flash * 1000) / memory}`);
 
 // 8
-let money = +prompt("Enter amount of money:");
-let chocolatePrice = +prompt("Enter chocolate price:");
-alert(`Number of chocolates: ${money / chocolatePrice}`);
-alert(`Remainder:`);
+// let myMoney = +prompt("Enter amount of money:");
+// let chocolatePrice = +prompt("Enter chocolate price:");
+// alert(`Number of my chocolates: ${myMoney / chocolatePrice}`);
+
+// let x = (money / chocolatePrice) % 10;
+// // x- kоличество шоколадок-дробное число
+
+// let y = myMoney - (chocolatePrice ** x % 10);
+// // y-сдача
+
+// alert(`Остача: ${myMoney - y}`);
+
+// 9
+// let threDigitNumber = +prompt("Enter three digit number:");
+// alert(`Your number: ${}`);
+
+// 10 Zle:(
+let sum = +prompt("Enter your sum:");
+const percent = 5;
+let za12MiesiacyMoney = percent ** sum / 100;
+let zaJedenMesiac = za12MiesiacyMoney / 12;
+alert(`Your result: ${zaJedenMesiac * 2}`);
