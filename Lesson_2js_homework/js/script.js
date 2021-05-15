@@ -13,7 +13,7 @@
 
 // 4
 // let radius = +prompt("Enter radius:");
-// alert(`area of a circle: ${3.14 * radius * radius}`);
+// alert(`area of a circle: ${3.14 ** radius}`);
 
 // 5
 // let km = +prompt("Enter kilometers:");
@@ -35,21 +35,10 @@
 // let chocolatePrice = +prompt("Enter chocolate price:");
 // alert(`Number of my chocolates: ${myMoney / chocolatePrice}`);
 
-// let x = (money / chocolatePrice) % 10;
-// // x- kоличество шоколадок-дробное число
-
-// let y = myMoney - (chocolatePrice ** x % 10);
-// // y-сдача
-
-// alert(`Остача: ${myMoney - y}`);
-
 // 9
-// let threDigitNumber = +prompt("Enter three digit number:");
-// alert(`Your number: ${}`);
+// let threDigitNumber = +prompt("Enter three digit number:"); //567
 
-// 10 Zle:(
-let sum = +prompt("Enter your sum:");
-const percent = 5;
-let za12MiesiacyMoney = percent ** sum / 100;
-let zaJedenMesiac = za12MiesiacyMoney / 12;
-alert(`Your result: ${zaJedenMesiac * 2}`);
+// 10 Zle
+// let sum = +prompt("Enter your sum:");
+// const percent = 5 / 100;
+// let profit = sum * (percent / 12) * 2;
