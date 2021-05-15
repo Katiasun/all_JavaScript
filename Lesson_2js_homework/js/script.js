@@ -1,5 +1,5 @@
 // 1
-// let yourName = +prompt("Enter you name:");
+// let yourName = prompt("Enter you name:");
 // alert(`Привет, ${yourName}`);
 
 // 2
@@ -26,9 +26,9 @@
 // alert(`Convector: ${dollar * euro}`);
 
 // 7
-// let flash = +prompt("Enter the size of the flash drive:");
+// let flash_drive = +prompt("Enter the size of the flash drive:");
 // const memory = 820;
-// alert(`Number of files to move: ${(flash * 1000) / memory}`);
+// alert(`Number of files to move: ${(flash_drive * 1024) / memory}`);
 
 // 8
 // let myMoney = +prompt("Enter amount of money:");
