@@ -35,10 +35,18 @@
 // let chocolatePrice = +prompt("Enter chocolate price:");
 // alert(`Number of my chocolates: ${myMoney / chocolatePrice}`);
 
+// let change = myMoney % chocolatePrice; //ОСТАТОК
+// let numberOfChocolate = (myMoney - change) / chocolatePrice;
+// alert (`Остаток денег: ${change},  Количество шоколадк: ${numberOfChocolate}`);
 // 9
-// let threDigitNumber = +prompt("Enter three digit number:"); //567
+// let threDigitNumber = +prompt("Enter three digit number:"); //356
+// let lastNumber= threDigitNumber%10; //6
+// let lastTwo=threDigitNumber%100; //56
+// let secondNumber= (lastTwo - lastNumber)/10; //5
+// let firstNumber= (threDigitNumber-lastTwo)/100; //3
+// let reversedNumber= lastNumber*100+secondNumber*10+firstNumber;
 
-// 10 Zle
+// 10
 // let sum = +prompt("Enter your sum:");
 // const percent = 5 / 100;
 // let profit = sum * (percent / 12) * 2;
