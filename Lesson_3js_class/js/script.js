@@ -129,8 +129,8 @@
 // let resuly = (num %5 == 0) ? alert("Yes") : alert("No");
 
 // 3
-let planet = prompt("Enter your planet");
-let result =
-  planet == "Земля" || planet == "земля"
-    ? alert("Привет, землянин!")
-    : alert("Привет, инопланетянин!");
+// let planet = prompt("Enter your planet");
+// let result =
+//   planet == "Земля" || planet == "земля"
+//     ? alert("Привет, землянин!")
+//     : alert("Привет, инопланетянин!");
