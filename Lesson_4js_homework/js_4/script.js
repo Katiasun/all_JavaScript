@@ -100,8 +100,8 @@ if (num_1 == num_2 || num_1 == num_3 || num_2 == num_3) {
   alert("Совпадений не найдено");
 }
 
-Запросить у пользователя год и проверить высокосный или нет
-let year= prompt("Enter year:");
+// Запросить у пользователя год и проверить высокосный или нет
+let year= +prompt("Enter year:");
 if (year==(366%4)){
   alert(`Год высокосный`);
 } else if (year== !(365%4)){
@@ -109,7 +109,7 @@ if (year==(366%4)){
 }
 
 //Написать конвертор валют
-let suma = prompt("Enter USD:");
+let suma = +prompt("Enter USD:");
 
 let eur = 0.82;
 let uan = 27.42;
