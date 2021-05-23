@@ -50,50 +50,59 @@ if (password == `Admin`) {
 //HOMEWORK
 //Запросить у пользователя его возраст и определить кем он явдяется...
 
-let age= +prompt (" Enter your age:");
+let age = +prompt(" Enter your age:");
 
-if ( age>0 || age=<2) {
-  alert ("A child");
-}else if (age>=12 || age<18){
-  alert ("A teenager");
-} else if (age>=18 || age<=60){
-  alert ("An adult");
-} else if (age>60){
-  alert ("A pensioner");
+if (age > 0 && age <= 2) {
+  alert("A child");
+} else if (age >= 12 && age < 18) {
+  alert("A teenager");
+} else if (age >= 18 && age <= 60) {
+  alert("An adult");
+} else if (age > 60) {
+  alert("A pensioner");
 }
 
 // Запросить у пользователя число от 0-9 и вывести ему спецсимвол...
 let num = prompt("Enter number:");
 if (num == 1) {
-  alert("!");
-}
-if (num == 2) {
-  alert("@");
-}
-if (num == 3) {
-  alert("#");
-}
-if (num == 4) {
-  alert("$");
-}
-if (num == 5) {
-  alert("%");
-}
-if (num == 6) {
-  alert("^");
-} if (num == 7) {
-  alert("&");
-} if (num==8){
-  alert ("*");
-} if (num==9){
-  alert ("(")
+  switch (num) {
+    case 1:
+      alert("!");
+      break;
+    case 2:
+      alert("@");
+      break;
+    case 3:
+      alert("#");
+      break;
+    case 4:
+      alert("$");
+      break;
+    case 5:
+      alert("%");
+      break;
+    case 6:
+      alert("^");
+      break;
+    case 7:
+      alert("&");
+      break;
+    case 8:
+      alert("*");
+      break;
+    case 9:
+      alert("(October)");
+      break;
+  }
 }
 
 // Запросить у пользователя трехзначное число и проверить, есть ли в нем одинаковые цифры
 let number = prompt("Введите трехзначное число: ");
-let num_1 = number / 100;
-let num_2 = (number / 10) % 10;
 let num_3 = number % 10;
+let lastTwo = number % 100;
+let num_1 = (number - lastTwo) / 100;
+let num_2 = (lastTwo - num_3) / 10;
+
 if (num_1 == num_2 || num_1 == num_3 || num_2 == num_3) {
   alert("Найдено совпадение цифр");
 } else {
@@ -101,23 +110,69 @@ if (num_1 == num_2 || num_1 == num_3 || num_2 == num_3) {
 }
 
 // Запросить у пользователя год и проверить высокосный или нет
-let year= +prompt("Enter year:");
-if (year==(366%4)){
+let year = +prompt("Enter year:");
+if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)) {
   alert(`Год высокосный`);
-} else if (year== !(365%4)){
-  alert ("Год невысокосный");
+} else {
+  alert("Год невысокосный");
 }
 
 //Написать конвертор валют
 let suma = +prompt("Enter USD:");
 
-let eur = 0.82;
-let uan = 27.42;
-let azn = 1.7;
-if (suma/eur){
-  alert(`EUR`:);
-} else if (suma/uan){
-  alert (`UAN:`);
-} if (suma/azn){
-  alert (`AZN:`);
+const currency = prompt("Enter currency(EUR,UAH or AZN)");
+const eur = 0.82;
+const uah = 27.42;
+const azn = 1.7;
+if (currency === "EUR") {
+  alert(`${suma * eur} EUR`);
+} else if (currency === "UAH") {
+  alert(`${suma * uah} UAH`);
 }
+if (currency === "AZN") {
+  alert(`${suma * azn}`);
+}
+
+//Запросить у пользователя сумму покупки и вывести сумму к оплате со скидкой: от 200 до 300 – скидка будет 3%, от 300 до 500 – 5%, от 500 и выше – 7%.
+let suma = +prompt("Cумму покупки:");
+if (suma >= 200 && suma < 300) {
+  alert("Cкидка будет 3%");
+} else if (suma >= 300 && suma < 500) {
+  alert("Cкидка будет 5%");
+} else if (suma >= 500 && suma > " ") {
+  alert("Cкидка будет 7%");
+}
+//Запросить у пользователя длину окружности и периметр квадрата. Определить, может ли такая окружность поместиться в указанный квадрат.
+let circumference = +prompt(" Enter circumference:");
+let perimeterOfSquare = +prompt("Enter perimeter of a square");
+if (circumference < perimeterOfSquare) {
+  alert(`Можешь поместить круг в квадрат`);
+}
+//Задать пользователю 3 вопроса, в каждом вопросе по 3 варианта ответа. За каждый правильный ответ начисляется 2 балла. После вопросов выведите пользователю количество набранных баллов.
+
+let myQuestions =[
+  questio_1:" Что в Российской империи было вещевым эквивалентом денег?", answer{
+    a:"Шкуры пушных зверей",
+    b: "Крупный рогатый скот",
+    c: "Табак"
+  },
+  correctAnswer: "a"
+},
+{
+  questio_2:" Кто из знаменитых художников за жизнь продал всего одну картину?, answer "{
+    a:"Винсент Ван Гог.",
+    b: "Пьер Огюст Ренуар",
+  },
+  correctAnswer: "a"
+},
+{
+  questio_3:" Страусы от опасности прячут голову в песок.", answer:{
+    a:"Yes",
+    b: "No",
+  },
+  correctAnswer: "b"
+}
+];
+if (questio_1== a || questio_1==b || questio_1==c){
+  a++;
+

@@ -3,9 +3,9 @@ let yourName = prompt("Enter you name:");
 alert(`Привет, ${yourName}`);
 
 // 2
-let age = +prompt("Enter year of your birth:");
+let yesrOfBirth = +prompt("Enter year of your birth:");
 const thisYear = 2021;
-alert(`Your age: ${thisYear - age}`);
+alert(`Your age: ${thisYear - yesrOfBirth}`);
 
 // 3
 let side = +prompt("Enter the side of the square: ");
@@ -13,7 +13,8 @@ alert(`Perimeter of a square: ${4 * side}`);
 
 // 4
 let radius = +prompt("Enter radius:");
-alert(`area of a circle: ${3.14 ** radius}`);
+const PI = 3.14;
+alert(`area of a circle: ${PI * radius ** 2}`);
 
 // 5
 let km = +prompt("Enter kilometers:");
@@ -33,7 +34,6 @@ alert(`Number of files to move: ${(flash_drive * 1024) / memory}`);
 // 8
 let myMoney = +prompt("Enter amount of money:");
 let chocolatePrice = +prompt("Enter chocolate price:");
-alert(`Number of my chocolates: ${myMoney / chocolatePrice}`);
 
 let change = myMoney % chocolatePrice; //ОСТАТОК
 let numberOfChocolate = (myMoney - change) / chocolatePrice;
