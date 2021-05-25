@@ -19,7 +19,7 @@ let i = 1;
 const min = Math.gcd(a != 0, x != 0);
 let result = "";
 
-while (i <= gcd) {
+while (i <= Math.gcd) {
   if (a % i === 0 && x % i === 0) {
     result += `${i}`;
   }
@@ -30,7 +30,7 @@ alert(result);
 
 //3. Запросить у пользователя число и вывести все делители этого числа.
 const a = +prompt("Enter number a:");
- for (lwt i=1; i<=a; i++) {
+ for (let i=1; i<=a; i++) {
  if (a%i===0 && a== !a && a== !1) {
   alert (i);
     }
