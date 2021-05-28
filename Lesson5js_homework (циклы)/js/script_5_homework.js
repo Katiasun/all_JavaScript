@@ -1,142 +1,151 @@
 //1. Подсчитать сумму всех чисел в заданном пользователем диапазоне.
-const a = +prompt("Начало диапазона:");
-const b = +prompt("Конец диапазона:");
+const num1 = +prompt("Начало диапазона:");
+const num2 = +prompt("Конец диапазона:");
 
-let i = 0;
+let sum = 0;
+let i = num1;
 
-while (a <= b) {
-  i += a;
+while (num1 <= num2) {
+  sum += i;
   i++;
 }
-alert(i);
+alert(sum);
 
 //2. Запросить 2 числа и найти только наибольший общий делитель.
 const a = +prompt("Enter number a:");
-const x = +prompt("Enter number x:");
 
-let i = 1;
-
-const min = Math.gcd(a != 0, x != 0);
-let result = "";
-
-while (i <= Math.gcd) {
-  if (a % i === 0 && x % i === 0) {
-    result += `${i}`;
-  }
-  i++;
+let b = 75;
+let a = 250;
+let temp;
+while (b > 0) {
+  temp = b;
+  b = a % b;
+  a = temp;
 }
-
-alert(result);
+alert(a);
 
 //3. Запросить у пользователя число и вывести все делители этого числа.
 const a = +prompt("Enter number a:");
- for (let i=1; i<=a; i++) {
- if (a%i===0 && a== !a && a== !1) {
-  alert (i);
-    }
- }
 
+let i = 1;
+for (let i = 1; i <= a; i++) {
+  if (a % i === 0) {
+    console.log(i);
+  }
+}
 
 //4. Определить количество цифр в введенном числе.
-const x = +prompt("Enter number x:");
+let x = +prompt("Enter number x:");
 
-let result= Math.abs(n);
-let i=0;
-
-while (result>0){
-    result= (result-result%10)/10;
-    i++;
+let i = 0;
+// 136-6=130; 130/10=13
+while (x > 0) {
+  x = (x - (x % 10)) / 10;
+  i++;
 }
-alert (result);
+alert(i);
 
 //5. Запросить у пользователя 10 чисел и подсчитать,
 // сколько он ввел положительных, отрицательных и нулей.
 // При этом также посчитать, сколько четных и нечетных.
 // Вывести статистику на экран. Учтите, что достаточно
 // одной переменной (не 10) для ввода чисел пользователем.
-let a=0;
-let b=0;
-let N= prompt ("введите 10 чисел:");
-if (N){
-    N.split (" "). map(function(i)){
-        let num=result (i);
-        if (num!==NaN){
-            if (num>0 && num !=0) {a++;}
-            else {b++;}
-        }
-    }
-}
-if (a>0){
-    alert ("Количество положительных:");
-}
-else{
-    alert ("Положительных чисел нет");
-}
-    if(a>0){
-        alert ("Количество отрицательных:");
-    }
-    else {
-        alert ("Отрицательных чисел нет");
-    }
+let positive = 0;
+let negative = 0;
+let zero = 0;
 
+let num = 0;
+
+let odd = 0;
+let even = 0;
+
+for (let i = 0; i < 10; i++) {
+  num = +prompt("Enter number:");
+  if (num > 0) {
+    positive++;
+  } else if (num < 0) {
+    negative++;
+  } else {
+    zero++;
+  }
+  if (num % 2 === 0) {
+    even++;
+  } else {
+    odd++;
+  }
+}
+alert(`${positive}, ${negative}, ${odd}, ${even}, ${zero}`);
 
 //6.Зациклить калькулятор. Запросить у пользователя 2 числа и знак,
 // решить пример, вывести результат и спросить,
 // хочет ли он решить еще один пример.
 //  И так до тех пор, пока пользователь не откажется.
-do{
-const a = +prompt("Enter number a:");
-const x = +prompt("Enter number x:");
-let allOperands = ("+", "-", "*", "/");
-let c= prompt ("Хотите ли вы решить еще один пример? Y/N");
-if (allOperands=="Y"){
-    switch (i){
-        case "+" : alert (a+x); 
-        break; 
 
-        case "-" : alert (a-x);
-        break;
+while (true) {
+  let a = +prompt("Enter number a:");
+  let x = +prompt("Enter number x:");
 
-        case "*" : alert (a*x);
-        break;
+  let operand = prompt("Enter sign: +, -, *, /");
 
-        case "/" : alert (a/x);
-        break;
-    }
+  switch (operand) {
+    case "+":
+      alert(a + x);
+      break;
+
+    case "-":
+      alert(a - x);
+      break;
+
+    case "*":
+      alert(a * x);
+      break;
+
+    case "/":
+      alert(a / x);
+      break;
+  }
 }
-} while (!"N");
-
-
 
 //7. Запросить у пользователя число и на сколько цифр его сдвинуть.
 // Сдвинуть цифры числа и вывести результат (если число 123456 сдвинуть на 2 цифры,
 //     то получится 345612).
+let a = +prompt("Enter number:");
 
 //8.Зациклить вывод дней недели таким образом:
 //  «День недели. Хотите увидеть следующий день?» и так до тех пор,
 //  пока пользователь нажимает OK.
-const days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
-let currDay=0;
- 
-while (confirm(`${days[currDay]} . Хотите увидеть следующий день?`)){
-    nextDay= (currDay+1)% days.length;
+const days = [
+  "Понедельник",
+  "Вторник",
+  "Среда",
+  "Четверг",
+  "Пятница",
+  "Суббота",
+  "Воскресенье",
+];
+let isOver;
+
+outer: while (true) {
+  for (let i = 0; i < days.length; i++) {
+    alert(days[i]);
+    isOver = confirm("Do you want to continue:"); // OK - true cancel - false
+    if (!isOver) {
+      // !isOver == true
+      break outer;
+    }
+  }
 }
-alert (nextDay);
-
-
 
 //9.Вывести таблицу умножения для всех чисел от 2 до 9.
-let x=prompt("Enter a number:",2);
-let result= "";
-
-for (let i=2; i<=9; i++){
-result +=x + "*" + i + "=" + x*i + `\n`;
+for (let i = 2; i < 10; i++) {
+  for (let j = 2; j < 10; j++) {
+    console.log(`${i}* ${j}= ${i * j}`);
+  }
 }
-alert (result);
-
-
 
 //  Каждое число необходимо умножить на числа от 1 до 10.
 //10. Игра «Угадай число». Предложить пользователю загадать число от 0 до 100 и отгадать его следующим способом: каждую итерацию цикла делите диапазон чисел пополам, записываете результат в N и спрашиваете у пользователя «Ваше число > N, < N или == N?».
 // В зависимости от того, что указал пользователь, уменьшаете диапазон. Начальный диапазон от 0 до 100, поделили пополам и получили 50. Если пользователь указал, что его число > 50, то изменили диапазон на от 51 до 100.
 //  И так до тех пор, пока пользователь не выберет == N.
+let start = +prompt("Enter first number:");
+let finish = +prompt("Enter last number:");
