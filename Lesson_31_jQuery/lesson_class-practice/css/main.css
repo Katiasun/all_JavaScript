@@ -44,6 +44,9 @@ body {
   color: #620808;
   font-family: "Raleway", sans-serif;
   padding: 24px;
+  display: none;
+  overflow: hidden;
+  height: 0;
 }
 
 .accordion-item-1 .header {
@@ -52,7 +55,8 @@ body {
 }
 
 .accordion-item-1 .body {
-  background-color: #f4ce74;
+  background-color: #620808;
+  color: #ffe9c1;
   -webkit-box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25);
           box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25);
 }
@@ -63,8 +67,8 @@ body {
 }
 
 .accordion-item-2 .body {
-  background-color: #ffe9c1;
-  color: #620808;
+  background-color: #a53f3f;
+  color: #f4ce74;
   -webkit-box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25);
           box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25);
 }
@@ -75,8 +79,8 @@ body {
 }
 
 .accordion-item-3 .body {
-  background-color: #620808;
-  color: #f4ce74;
+  background-color: #f4ce74;
+  color: #620808;
   -webkit-box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25);
           box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25);
 }
@@ -87,7 +91,8 @@ body {
 }
 
 .accordion-item-4 .body {
-  background-color: #f4ce74;
+  background-color: #a53f3f;
+  color: #ffe9c1;
   -webkit-box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25);
           box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25);
 }
@@ -98,8 +103,8 @@ body {
 }
 
 .accordion-item-5 .body {
-  background-color: #ffe9c1;
-  color: #d5441c;
+  background-color: #d5441c;
+  color: #ffe9c1;
   -webkit-box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25);
           box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25);
 }
