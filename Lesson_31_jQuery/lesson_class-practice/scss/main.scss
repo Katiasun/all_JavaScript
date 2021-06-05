@@ -1,0 +1,81 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: whitesmoke;
+}
+.wrapper {
+  min-height: 100vh;
+  background-color: #f6704b;
+  padding: 135px 0;
+  font-family: "Raleway", sans-serif;
+}
+.accordion {
+  margin: 0 auto;
+  width: 381px;
+}
+.accordion-item {
+}
+.header {
+  display: flex;
+  padding: 26px 22px;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.header img {
+  margin-left: 22px;
+}
+.body {
+  font-size: 17px;
+  line-height: 28px;
+  color: #620808;
+  font-family: "Raleway", sans-serif;
+  padding: 24px;
+}
+.accordion-item-1 .header {
+  background-color: #620808;
+  color: #ffe9c1;
+}
+.accordion-item-1 .body {
+  background-color: #f4ce74;
+  box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25);
+}
+.accordion-item-2 .header {
+  background-color: #a53f3f;
+  color: #f4ce74;
+}
+.accordion-item-2 .body {
+  background-color: #ffe9c1;
+  color: #620808;
+  box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25);
+}
+.accordion-item-3 .header {
+  background-color: #f4ce74;
+  color: #620808;
+}
+.accordion-item-3 .body {
+  background-color: #620808;
+  color: #f4ce74;
+  box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25);
+}
+.accordion-item-4 .header {
+  background-color: #a53f3f;
+  color: #ffe9c1;
+}
+.accordion-item-4 .body {
+  background-color: #f4ce74;
+  box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25);
+}
+.accordion-item-5 .header {
+  background-color: #d5441c;
+  color: #ffe9c1;
+}
+.accordion-item-5 .body {
+  background-color: #ffe9c1;
+  color: #d5441c;
+  box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25);
+}
