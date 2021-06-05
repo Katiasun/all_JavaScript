@@ -46,7 +46,7 @@ body {
   padding: 24px;
   display: none;
   overflow: hidden;
-  height: 0;
+  max-height: 0;
 }
 
 .accordion-item-1 .header {
