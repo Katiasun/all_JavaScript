@@ -5,11 +5,18 @@
 }
 
 .wrapper {
-  background: url("../img/BG\ 1.png");
+  background: url("../img/BG\ 1.png") center center no-repeat;
+  background-size: cover;
   margin: 0 auto;
+}
+.content {
+  max-width: 600px;
+  padding-top: 163px;
+  padding-bottom: 164px;
 }
 .header {
   padding: 26px 50px 34px 50px;
+  background: #2b2f3f;
 }
 .icones {
 }
@@ -23,6 +30,7 @@
 
   color: rgba(183, 186, 205, 0.7);
 }
+
 .link .img1 {
   background-image: url("../img/tooltip.png") center center no-repeat;
 }
@@ -41,15 +49,11 @@
 .link:focus .img3 {
   background-image: url("../img/basket\ \(1\).png") center center no-repeat;
 }
+
 .link:focus h3,
 .link:focus.img1,
 .link:focus.img2,
 .link:focus.img3 {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-
   color: #ffffff;
   text-decoration: underline 3px rgb(250, 239, 239);
 }
@@ -68,20 +72,26 @@
   }
 }
 .body {
+  padding: 42px;
+  background: #212434;
 }
 .bigCard {
 }
 .picture {
   &__bigCard {
+    text-align: center;
   }
 }
 .rating {
+  margin-top: 24px;
+  margin-bottom: 63px;
 }
 
 .info {
   &__bigCard {
   }
 }
+
 .score {
 }
 .heading {

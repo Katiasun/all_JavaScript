@@ -6,12 +6,20 @@
 }
 
 .wrapper {
-  background: url("../img/BG 1.png");
+  background: url("../img/BG 1.png") center center no-repeat;
+  background-size: cover;
   margin: 0 auto;
+}
+
+.content {
+  max-width: 600px;
+  padding-top: 163px;
+  padding-bottom: 164px;
 }
 
 .header {
   padding: 26px 50px 34px 50px;
+  background: #2b2f3f;
 }
 
 .link {
@@ -52,10 +60,6 @@
 .link:focus.img1,
 .link:focus.img2,
 .link:focus.img3 {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
   color: #ffffff;
   -webkit-text-decoration: underline 3px #faefef;
           text-decoration: underline 3px #faefef;
@@ -74,5 +78,19 @@
   display: -ms-flexbox;
   display: flex;
   text-align: center;
+}
+
+.body {
+  padding: 42px;
+  background: #212434;
+}
+
+.picture__bigCard {
+  text-align: center;
+}
+
+.rating {
+  margin-top: 24px;
+  margin-bottom: 63px;
 }
 /*# sourceMappingURL=main.css.map */
