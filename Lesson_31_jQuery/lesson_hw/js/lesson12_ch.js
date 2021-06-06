@@ -28,3 +28,10 @@
 // $toggleButton.on("click", () => {
 //   $paragraph.slideToggle(100);
 // });
+const $link = $(".link");
+const $bodyText = $(".bodyText");
+
+$link.on("click", function () {
+  $bodyText.stop().slideUp();
+  $(this).next().stiop().xlideToggle();
+});
