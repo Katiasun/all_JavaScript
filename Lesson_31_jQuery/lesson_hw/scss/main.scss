@@ -60,9 +60,6 @@
 .icon {
   display: flex;
   text-align: center;
-
-  &__icones:hover {
-  }
 }
 .body {
   padding: 42px;
@@ -119,6 +116,10 @@
 .piwnica {
   font-family: "Raleway", sans-serif;
   display: flex;
+  margin-left: 190px;
+  .price {
+    margin-right: 32px;
+  }
   .price p {
     font-weight: bold;
     font-size: 12px;

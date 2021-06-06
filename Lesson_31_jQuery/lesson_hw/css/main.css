@@ -126,6 +126,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 190px;
+}
+
+.piwnica .price {
+  margin-right: 32px;
 }
 
 .piwnica .price p {
