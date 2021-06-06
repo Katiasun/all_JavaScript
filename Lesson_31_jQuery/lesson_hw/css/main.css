@@ -93,4 +93,19 @@
   margin-top: 24px;
   margin-bottom: 63px;
 }
+
+.heading {
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.piwnica {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=main.css.map */
