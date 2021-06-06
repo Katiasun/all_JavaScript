@@ -85,6 +85,7 @@
 .rating {
   margin-top: 24px;
   margin-bottom: 63px;
+  cursor: pointer;
 }
 
 .info {
@@ -97,23 +98,54 @@
   color: #ffffff;
   text-align: center;
   display: flex;
-  &__title {
-  }
 
+  &__big-title {
+    text-align: left;
+  }
+  &__title {
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 8px;
+  }
   &__subtitle {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
   }
   &__score {
   }
 }
 
 .copy {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+
+  color: #b7bacd;
+  margin-top: 33px;
+  margin-bottom: 49px;
 }
 .footer {
 }
 .piwnica {
+  font-family: "Raleway", sans-serif;
   display: flex;
 }
-.price {
+.price p {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+
+  color: #fedc3f;
+  margin-bottom: 4px;
+}
+.price h4 {
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 38px;
+
+  color: #ffffff;
 }
 .button {
 }
