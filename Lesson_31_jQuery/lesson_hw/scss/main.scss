@@ -2,7 +2,6 @@
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
 }
 
 .wrapper {
@@ -10,13 +9,62 @@
   margin: 0 auto;
 }
 .header {
+  padding: 26px 50px 34px 50px;
 }
 .icones {
 }
 .link {
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  color: rgba(183, 186, 205, 0.7);
 }
+.link .img1 {
+  background-image: url("../img/tooltip.png") center center no-repeat;
+}
+.link:focus .img1 {
+  background-image: url("../img/tooltip\ \(1\).png") center center no-repeat;
+}
+.link .img2 {
+  background-image: url("../img/card.png") center center no-repeat;
+}
+.link:focus .img2 {
+  background-image: url("../img/card\ \(1\).png") center center no-repeat;
+}
+.link .img3 {
+  background-image: url("../img/basket.png") center center no-repeat;
+}
+.link:focus .img3 {
+  background-image: url("../img/basket\ \(1\).png") center center no-repeat;
+}
+.link:focus h3,
+.link:focus.img1,
+.link:focus.img2,
+.link:focus.img3 {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #ffffff;
+  text-decoration: underline 3px rgb(250, 239, 239);
+}
+.link img {
+  margin-bottom: 14px;
+}
+.link h3 {
+  margin-bottom: 34px;
+}
+
 .icon {
-  &__icones {
+  display: flex;
+  text-align: center;
+
+  &__icones:hover {
   }
 }
 .body {
