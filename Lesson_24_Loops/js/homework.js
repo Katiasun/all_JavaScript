@@ -5,7 +5,7 @@ const num2 = +prompt("Конец диапазона:");
 let sum = 0;
 let i = num1;
 
-while (num1 <= num2) {
+while (i <= num2) {
   sum += i;
   i++;
 }
@@ -104,6 +104,7 @@ while (true) {
       alert(a / x);
       break;
   }
+  proceed = confirm("Once more");
 }
 
 //7. Запросить у пользователя число и на сколько цифр его сдвинуть.
@@ -123,13 +124,13 @@ const days = [
   "Суббота",
   "Воскресенье",
 ];
-let isOver;
+let wantMore;
 
 outer: while (true) {
   for (let i = 0; i < days.length; i++) {
     alert(days[i]);
-    isOver = confirm("Do you want to continue:"); // OK - true cancel - false
-    if (!isOver) {
+    wantMore = confirm(`${days[i]}.Do you want to see next day?`); // OK - true cancel - false
+    if (!wantMore) {
       break outer;
     }
   }
