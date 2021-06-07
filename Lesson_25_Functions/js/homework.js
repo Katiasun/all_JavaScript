@@ -5,27 +5,29 @@ function getNumbers(num1, num2) {
   let num2 = +prompt("Enter number num2:");
 
   if (num1 < num2) {
-    console.log(-1);
+    return -1;
   } else if (num1 > num2) {
-    console.log(1);
+    return 1;
   } else {
-    console.log(0);
+    return 0;
   }
 }
 
 //2.Написать функцию, которая вычисляет факториал переданного ей числа.
 function calcFactorial(number) {
   let answer = 1;
+
   for (let i = 1; i <= number; i++) {
     answer *= i;
   }
-  alert(answer);
+  return answer;
 }
-calcFactorial();
+console.log(calcFactorial(5));
+alert(calcFactorial(10));
 
 //3. Написать функцию, которая принимает три отдельные цифры и превращает их в одно число. Например: цифры 1, 4, 9 превратятся в число 149.
 function threeNumbers(a, x, y) {
-  return a + x + y;
+  return a * 100 + x * 10 + y;
 }
 let number1 = +prompt("Enter number 1:");
 let number2 = +prompt("Enter number 2:");
@@ -34,13 +36,13 @@ let number3 = +prompt("Enter number 3:");
 let allNumber = threeNumbers(a, x, y);
 
 //4.Написать функцию, которая принимает длину и ширину прямоугольника и вычисляет его площадь. Если в функцию передали 1 параметр, то она вычисляет площадь квадрата.
-function calcRectangle(w, h) {
+function calcRectangle(w, h = w) {
   return w * h;
 }
 let width = +prompt("Enter width of rectangle:");
 let high = +prompt("Enter high of rectangle:");
 
-let area = calcRectangle(w, h);
+let area = calcRectangle(width, high);
 
 alert(area);
 
@@ -75,7 +77,7 @@ function isPerfectNumber(inputNumber) {
       sum += i; //0+1=1; 1+2=3;
     }
   }
-  if (sum == inputNumber) {
+  if (sum === inputNumber) {
     return true;
   } else {
     return false;
@@ -83,9 +85,9 @@ function isPerfectNumber(inputNumber) {
   alert(inputNumber);
 }
 
-function minAndMax(min, max) {
-  for (let i = Math.min(min, max); i <= Math.min(min, max); i++) {
-    if (isPerfectNumber(i) === true) {
+function showPerfectNumbers(min, max) {
+  for (let i = Math.min(min, max); i <= Math.max(min, max); i++) {
+    if (isPerfectNumber(i)) {
       alert(`${i}`);
     }
   }
@@ -94,16 +96,18 @@ function minAndMax(min, max) {
 //7. Написать функцию, которая принимает время (часы, минуты, секунды) и
 // выводит его на экран в формате «чч:мм:сс».Если при вызове функции минуты и/или секунды не были переданы,
 // то выводить их как 00.
-function getDateFormat(time) {
+function formatTimeUnit(time) {
   return time.toString().padStart(2, "0");
 }
 function getTime(hour = 0, min = 0, sec = 0) {
-  return `${getDateFormat(hour)}:${getDateFormat(min)}:${getDateFormat(sec)}`;
+  return `${formatTimeUnit(hour)}:${formatTimeUnit(min)}:${formatTimeUnit(
+    sec
+  )}`;
 }
 console.log(getTime(23, 26, 59));
 
 //8. Написать функцию, которая принимает часы, минуты и секунды и возвращает это время в секундах.
-function changedTime(hour = 0, min = 0, sec = 0) {
+function getTimeInSeconds(hour = 0, min = 0, sec = 0) {
   let secondsInMinutes = 60 * min;
   let minutesInHours = hour * 60;
   let secondsInHours = minutesInHours * 60;
@@ -111,7 +115,7 @@ function changedTime(hour = 0, min = 0, sec = 0) {
   let sum = secondsInHours + secondsInMinutes + sec;
   return sum;
 }
-console.log(changedTime(60, 20, 10));
+console.log(getTimeInSeconds(60, 20, 10));
 
 //9.Написать функцию, которая принимает количество секунд,
 // переводит их в часы, минуты и секунды и возвращает в виде строки «чч:мм:сс».
