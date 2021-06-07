@@ -8,8 +8,8 @@
 let car = {
   manufacturer: "Великобритания",
   model: "I-PACE S",
-  "Year of Manufacture": 2019,
-  "Average speed": 100,
+  yearOfManufacture: 2019,
+  averageSpeed: 100,
 };
 
 function getInfo(aboutCar) {
@@ -49,7 +49,7 @@ console.log(`You will need:${dane}`);
 let drob1 = { numerator: 5, denominator: 12 };
 let drob2 = { numerator: 2, denominator: 6 };
 
-function findNewDiviser(x, y) {
+function getGreattestCommonDivisor(x, y) {
   let minNumber = Math.min(Math.abs(x), Math.abs(y));
   for (let i = minNumber; i >= 1; i--) {
     if (x % i === 0 && y % i === 0) {
@@ -58,7 +58,10 @@ function findNewDiviser(x, y) {
   }
 }
 function cutDrob(result) {
-  let spilnyDilnyk = findNewDiviser(result.numerator, result.denominator);
+  let spilnyDilnyk = getGreattestCommonDivisor(
+    result.numerator,
+    result.denominator
+  );
   result.numerator /= spilnyDilnyk;
   result.denominator /= spilnyDilnyk;
 }
@@ -123,28 +126,22 @@ let dayTime = {
   seconds: 59,
 };
 
-function timeInDay(time) {
+function formatTime(time) {
   return `${time.hours.toString().padStart(2, "0")}:${time.minutes
     .toString()
     .padStart(2, "0")}:${time.seconds.toString().padStart(2, "0")}`;
 }
 
-console.log(timeInDay(dayTime));
+console.log(formatTime(dayTime));
 
-function calcTime(object) {
-  let seconds = object.seconds;
-  for (let i = seconds; i > 59; i--) {
-    if (i % 60 === 0) {
-      object.minutes += 1;
-      object.seconds -= 60;
-    }
+function fixTime(object) {
+  while (time.seconds >= 60) {
+    time.minutes++;
+    time.seconds -= 60;
   }
-  let minut = object.minutes;
-  for (let i = minut; i > 59; i--) {
-    if (i % 60 === 0) {
-      object.hours += 1;
-      object.minutes -= 60;
-    }
+  while (time.minutes >= 60) {
+    time.hours++;
+    timw.minutes - +60;
   }
 }
 
