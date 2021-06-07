@@ -1,0 +1,167 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrapper {
+  background: url("../img/BG_1.png") center center no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.content {
+  max-width: 600px;
+  padding-top: 163px;
+  padding-bottom: 164px;
+}
+
+.header {
+  padding: 26px 50px 34px 50px;
+  background: #2b2f3f;
+}
+
+.icon__icones:hover .img.active {
+  display: none;
+}
+
+.icon__icones:hover .img.inactive {
+  display: block;
+}
+
+.icon__icones:hover h3 {
+  color: rgba(183, 186, 205, 0.7);
+}
+
+.icon__icones .img.active {
+  display: block;
+}
+
+.icon__icones .img.inactive {
+  display: none;
+}
+
+.icon__icones h3 {
+  color: #ffffff;
+}
+
+.link {
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: rgba(183, 186, 205, 0.7);
+}
+
+.link img {
+  margin-bottom: 14px;
+}
+
+.tab {
+  color: #ffffff;
+  width: 100%;
+}
+
+.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.body {
+  padding: 42px;
+  background: #212434;
+}
+
+.picture__bigCard {
+  text-align: center;
+}
+
+.rating {
+  margin-top: 24px;
+  margin-bottom: 63px;
+  cursor: pointer;
+}
+
+.heading {
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.heading__big-title {
+  text-align: left;
+}
+
+.heading__title {
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 8px;
+}
+
+.heading__subtitle {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.heading__score {
+  display: block;
+}
+
+.copy {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #b7bacd;
+  margin-top: 33px;
+  margin-bottom: 49px;
+}
+
+.piwnica {
+  font-family: "Raleway", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 190px;
+}
+
+.piwnica .price {
+  margin-right: 32px;
+}
+
+.piwnica .price p {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #fedc3f;
+  margin-bottom: 4px;
+}
+
+.piwnica .price h4 {
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 38px;
+  color: #ffffff;
+}
+
+.piwnica .button {
+  padding: 18px 34px;
+  font-family: "Raleway", sans-serif;
+  background: #13e18c;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+}
+/*# sourceMappingURL=main.css.map */

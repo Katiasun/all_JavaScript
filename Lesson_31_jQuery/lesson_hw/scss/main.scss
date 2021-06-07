@@ -1,0 +1,153 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  background: url("../img/BG_1.png") center center no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+.content {
+  max-width: 600px;
+  padding-top: 163px;
+  padding-bottom: 164px;
+}
+.header {
+  padding: 26px 50px 34px 50px;
+  background: #2b2f3f;
+}
+
+.icon__icones {
+  &:hover {
+    .img.active {
+      display: none;
+    }
+    .img.inactive {
+      display: block;
+    }
+    h3 {
+      color: rgba(183, 186, 205, 0.7);
+    }
+  }
+  .img.active {
+    display: block;
+  }
+  .img.inactive {
+    display: none;
+  }
+  h3 {
+    color: #ffffff;
+  }
+}
+
+.link {
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  color: rgba(183, 186, 205, 0.7);
+}
+
+.link img {
+  margin-bottom: 14px;
+}
+.tab {
+  color: #ffffff;
+  width: 100%;
+}
+.icon {
+  display: flex;
+  text-align: center;
+}
+.body {
+  padding: 42px;
+  background: #212434;
+}
+
+.picture {
+  &__bigCard {
+    text-align: center;
+  }
+}
+.rating {
+  margin-top: 24px;
+  margin-bottom: 63px;
+  cursor: pointer;
+}
+
+.heading {
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+
+  &__big-title {
+    text-align: left;
+  }
+  &__title {
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 8px;
+  }
+  &__subtitle {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  &__score {
+    display: block;
+  }
+}
+
+.copy {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+
+  color: #b7bacd;
+  margin-top: 33px;
+  margin-bottom: 49px;
+}
+
+.piwnica {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  margin-left: 190px;
+  .price {
+    margin-right: 32px;
+  }
+  .price p {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #fedc3f;
+    margin-bottom: 4px;
+  }
+  .price h4 {
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 38px;
+
+    color: #ffffff;
+  }
+  .button {
+    padding: 18px 34px;
+    font-family: "Raleway", sans-serif;
+    background: #13e18c;
+    border-radius: 2px;
+    cursor: pointer;
+
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #ffffff;
+  }
+}
