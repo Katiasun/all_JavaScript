@@ -29,9 +29,11 @@
 //   $paragraph.slideToggle(100);
 // });
 const $link = $(".link");
-const $bodyText = $(".bodyText");
+const $tabs = $(".tab");
 
-$link.on("click", function () {
-  $bodyText.stop().slideUp();
-  $(this).next().stiop().xlideToggle();
+$link.on("click", function (event) {
+  event.preventDefault();
+  const id = $(this).attr("href");
+  $tabs.hide();
+  $(id).show();
 });

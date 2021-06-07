@@ -56,10 +56,9 @@
 .link img {
   margin-bottom: 14px;
 }
-.bodyText {
+.tab {
   color: #ffffff;
   width: 100%;
-  display: none;
 }
 .icon {
   display: flex;
@@ -69,8 +68,7 @@
   padding: 42px;
   background: #212434;
 }
-.bigCard {
-}
+
 .picture {
   &__bigCard {
     text-align: center;
