@@ -49,10 +49,9 @@
   margin-bottom: 120px;
 }
 .slider {
+  position: relative;
 }
 .slide {
-  width: 440px;
-  height: 400px;
   padding-left: 30px;
   padding-bottom: 30px;
   color: transparent;
@@ -82,4 +81,66 @@
 .slide:hover {
   background: rgba(20, 226, 142, 0.9);
   color: white;
+}
+.slide .slide-1 {
+  background: url("../img/Sofa.png") center center no-repeat;
+  background-size: cover;
+  width: 440px;
+  height: 400px;
+}
+.slide .slide-2 {
+  background: url("../img/Lamp.png") center center no-repeat;
+  background-size: cover;
+  width: 440px;
+  height: 400px;
+}
+.slide .slide-3 {
+  background: url("../img/Bike.png") center center no-repeat;
+  background-size: cover;
+  width: 440px;
+  height: 400px;
+}
+.slide .slide-4 {
+  background: url("../img/FedEx.png") center center no-repeat;
+  background-size: cover;
+  width: 440px;
+  height: 400px;
+}
+.slick-arrow {
+  height: 96px;
+  width: 96px;
+  border: none;
+  cursor: pointer;
+}
+.slick-prev {
+  background: url("../img/Previous.png") no-repeat;
+  margin-right: 20px;
+  position: absolute;
+  left: 24px;
+  top: 152px;
+}
+.slick-next {
+  background: url("../img/Next.png") no-repeat;
+  margin-left: 20px;
+  position: absolute;
+  right: 24px;
+  top: 152px;
+}
+
+.slick-dots {
+  display: flex;
+  margin-top: 10px;
+  font-style: 15px;
+  cursor: pointer;
+}
+.slick-dots li {
+  list-style: none;
+  border: none;
+  padding: 7px;
+  color: yellow;
+}
+.slick-dots:not(:last-child) li {
+  margin-right: 5px;
+}
+.slick-active {
 }
