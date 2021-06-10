@@ -1,5 +1,5 @@
 * {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -16,6 +16,9 @@
   text-transform: uppercase;
   position: relative;
   padding: 40px;
+  max-width: 1029px;
+  margin: 0 auto;
+
   &__plus {
     background: url("../img/plus.png") no-repeat;
     width: 30px;
@@ -35,6 +38,7 @@
   }
 }
 .subtitle {
+  text-align: center;
   font-weight: 600;
   font-size: 18px;
   line-height: 27px;
@@ -42,105 +46,95 @@
   margin-bottom: 18px;
 }
 .title {
-  width: 1029px;
+  text-align: center;
   font-weight: bold;
   font-size: 86px;
   line-height: 90px;
   margin-bottom: 120px;
 }
 .slider {
-  position: relative;
 }
 .slide {
-  padding-left: 30px;
-  padding-bottom: 30px;
-  color: transparent;
-
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-align: left;
+  position: relative;
+  color: white;
+  height: 400px;
   cursor: pointer;
 }
 .slide:not(:last-child) {
   margin-right: 44px;
 }
-.slide h4 {
+.slide-content h4 {
   margin-bottom: 8px;
   font-weight: bold;
   font-size: 28px;
   line-height: 24px;
-  padding-top: 290px;
-  padding-right: 101px;
 }
-.slide p {
+.slide-content p {
   font-weight: 600;
   font-size: 12px;
   line-height: 24px;
 }
-.slide:hover {
-  background: rgba(20, 226, 142, 0.9);
-  color: white;
+.slide:hover .slide-content {
+  opacity: 1;
 }
-.slide .slide-1 {
+.slide-content {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: left;
+  background-color: rgba(20, 226, 142, 0.9);
+  padding-left: 31px;
+  padding-bottom: 31px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+}
+.slide-1 {
   background: url("../img/Sofa.png") center center no-repeat;
   background-size: cover;
-  width: 440px;
-  height: 400px;
 }
-.slide .slide-2 {
+.slide-2 {
   background: url("../img/Lamp.png") center center no-repeat;
   background-size: cover;
-  width: 440px;
-  height: 400px;
 }
-.slide .slide-3 {
+.slide-3 {
   background: url("../img/Bike.png") center center no-repeat;
   background-size: cover;
-  width: 440px;
-  height: 400px;
 }
-.slide .slide-4 {
+.slide-4 {
   background: url("../img/FedEx.png") center center no-repeat;
   background-size: cover;
-  width: 440px;
-  height: 400px;
 }
 .slick-arrow {
+  position: absolute;
   height: 96px;
   width: 96px;
-  border: none;
+  border: 0;
+  background: none;
+  font-size: 0;
   cursor: pointer;
+  z-index: 900;
 }
 .slick-prev {
-  background: url("../img/Previous.png") no-repeat;
+  background: url("../img/Previous.png") center center no-repeat;
   margin-right: 20px;
-  position: absolute;
   left: 24px;
   top: 152px;
 }
 .slick-next {
-  background: url("../img/Next.png") no-repeat;
+  background: url("../img/Next.png") center center no-repeat;
   margin-left: 20px;
-  position: absolute;
   right: 24px;
   top: 152px;
 }
 
-.slick-dots {
-  display: flex;
-  margin-top: 10px;
-  font-style: 15px;
-  cursor: pointer;
-}
-.slick-dots li {
-  list-style: none;
-  border: none;
-  padding: 7px;
-  color: yellow;
-}
-.slick-dots:not(:last-child) li {
-  margin-right: 5px;
-}
 .slick-active {
 }

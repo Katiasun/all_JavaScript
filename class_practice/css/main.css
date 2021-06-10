@@ -156,7 +156,7 @@
           transform: translateX(-50%);
 }
 
-.slick-dotsli {
+.slick-dots li {
   margin: 0 8px;
 }
 

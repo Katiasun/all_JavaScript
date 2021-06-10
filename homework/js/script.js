@@ -1,8 +1,6 @@
 $(".slider").slick({
-  centerMode: true,
   slidesToShow: 3,
-  slidesToScroll: 2,
-  dots: true,
-  fade: true,
+  slidesToScroll: 1,
+  infinite: true,
   speed: 1000,
 });
