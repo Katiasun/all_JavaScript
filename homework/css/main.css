@@ -52,4 +52,41 @@
   line-height: 90px;
   margin-bottom: 120px;
 }
+
+.slide {
+  width: 440px;
+  height: 400px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  color: transparent;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
+}
+
+.slide:not(:last-child) {
+  margin-right: 44px;
+}
+
+.slide h4 {
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 24px;
+  padding-top: 290px;
+  padding-right: 101px;
+}
+
+.slide p {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.slide:hover {
+  background: rgba(20, 226, 142, 0.9);
+  color: white;
+}
 /*# sourceMappingURL=main.css.map */
