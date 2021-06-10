@@ -1,28 +1,40 @@
 * {
   margin: 0 auto;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
 .header {
   background: black;
 }
+
 .top-bar {
   padding: 28px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 900;
 }
+
 .navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
 }
+
 .navigation li:not(:last-child) {
   margin-right: 30px;
 }
+
 .navigation a {
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
@@ -33,29 +45,42 @@
 }
 
 .navigation a:hover {
-  text-decoration: overline 3px #27ae60;
+  -webkit-text-decoration: overline 3px #27ae60;
+          text-decoration: overline 3px #27ae60;
 }
+
 .slide-content {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .slide-1 .slide-content {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../img/BG-2.jpg") center center no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../img/BG-2.jpg") center center no-repeat;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/BG-2.jpg") center center no-repeat;
   background-size: cover, cover;
 }
+
 .slide-2 .slide-content {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../img/BG-1.jpg") center center no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../img/BG-1.jpg") center center no-repeat;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/BG-1.jpg") center center no-repeat;
   background-size: cover, cover;
 }
+
 .slide-3 .slide-content {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../img/BG.jpg") center center no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../img/BG.jpg") center center no-repeat;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/BG.jpg") center center no-repeat;
   background-size: cover, cover;
 }
 
@@ -86,7 +111,6 @@
   background: #27ae60;
   border-radius: 40px;
   padding: 16px 48px;
-
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
   font-size: 18px;
@@ -100,7 +124,8 @@
 .slick-arrow {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   z-index: 900;
   font-style: 0;
   background: none;
@@ -108,27 +133,33 @@
   width: 23px;
   height: 42px;
 }
+
 .slick-prev {
   left: 40px;
   background: url("../img/ChevronLeft.png") center center no-repeat;
 }
+
 .slick-next {
   right: 40px;
   background: url("../img/ChevronRight.png") center center no-repeat;
 }
 
 .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
   position: absolute;
   bottom: 50px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .slick-dotsli {
   margin: 0 8px;
 }
+
 .slick-dots {
   font-size: 0;
   width: 16px;
@@ -137,8 +168,11 @@
   background: rgba(255, 255, 255, 0.55);
   border-radius: 50%;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+
 .slick-dots .slick-active button {
   background: rgba(255, 255, 255, 0.9);
 }
+/*# sourceMappingURL=main.css.map */
