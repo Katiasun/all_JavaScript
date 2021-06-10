@@ -1,0 +1,54 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  background-color: whitesmoke;
+  padding: 100px 0 160px 0;
+}
+
+.texts {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+  position: relative;
+  padding: 40px;
+  &__plus {
+    background: url("../img/plus.png") no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 31px;
+    right: 290px;
+  }
+
+  &__triangle {
+    background: url("../img/triangle.png") no-repeat;
+    width: 54px;
+    height: 54px;
+    position: absolute;
+    top: 183px;
+    left: 32px;
+  }
+}
+.subtitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.2em;
+  margin-bottom: 18px;
+}
+.title {
+  width: 1029px;
+  font-weight: bold;
+  font-size: 86px;
+  line-height: 90px;
+  margin-bottom: 120px;
+}
+.slider {
+}
+.slide {
+}
