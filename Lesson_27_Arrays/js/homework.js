@@ -3,142 +3,165 @@
 
 const products = [
   {
-    banana: 5,
-    bought: true,
-
-    avokado: 2,
+    name: "Banana",
     bought: false,
-
-    oil: 1,
+    amount: 4,
+  },
+  {
+    name: "Avokado",
     bought: true,
-
-    water: 1,
+    amount: 2,
+  },
+  {
+    name: "Oil",
     bought: true,
-
-    shampoo: 1,
+    amount: 1,
+  },
+  {
+    name: "Water",
     bought: false,
+    amount: 1,
+  },
+  {
+    name: "Shampoo",
+    bought: false,
+    amount: 4,
   },
 ];
 
 //Вывод всего списка на экран таким образом, чтобы сначала шли некупленные продукты, а потом – купленные.
-function select(arr) {
-  let boughtGoods = [];
-  let notBoughtGoods = [];
-  for (let i = 0; i < arr.length; i++) {
-    let element = arr[i];
-
-    if (element.bought) {
-      boughtGoods.push(element);
-    } else {
-      notBoughtGoods.push(element);
+function sortByStatus(arr) {
+  arr.sort((a, b) => {
+    if (a.bought === b.bought) {
+      return 0;
     }
-  }
-  let result = notBoughtGoods.concat(boughtGoods);
-  return result;
+    return b.bought ? -1 : 1;
+  });
 }
-console.log(select(products));
+
+sortByStatus(products);
+
+console.log(products);
+
 // Добавление покупки в список. Учтите, что при добавлении покупки с уже существующим в списке продуктом,
 // необходимо увеличивать количество в существующей покупке, а не добавлять новую.
 
-//Не понимаю что хотят ):
+// Не понимаю что хотят ):
 
-function addProductToList(arr) {
-  let newProduct = []; //новые продукты
+function addProductToList(arr, productName) {
+  const existingProduct = arr.find((product) => product.name === productName);
 
-  for (let i = 0; i > arr.length; i++) {
-    newProduct;
+  if (existingProduct) {
+    existingProduct.amount++;
+  } else {
+    arr.push({
+      name: productName,
+      bought: false,
+      amount: 1,
+    });
   }
-
-  let result = newProduct.concat(arr);
 }
-console.log(addProductToList(products));
+
+addProductToList(products, "Shampoo");
+console.log(products);
+addProductToList(products, "Potatoes");
+console.log(products);
+
 // Покупка продукта. Функция принимает название продукта и отмечает его как купленный.
-function boughtProduct(arr) {
-  let result = [];
+function boughtProduct(arr, productName) {
+  const existingProduct = arr.find((product) => product.name === productName);
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].bought) {
-      result.push(arr[i]);
-    }
+  if (existingProduct) {
+    existingProduct.bought = true;
   }
-  return select;
 }
-console.log(boughtProduct(products));
+boughtProduct(products, "Shampoo");
+console.log(products);
 //2. Создать массив, описывающий чек в магазине. Каждый элемент массива состоит из названия товара,
 // количества и цены за единицу товара. Написать следующие функции:
 const receipt = [
-  {name: "banana", number:5, price:4}
-  {name:"shampoo", number:2 ,price:10 ,}
-  {name:"kiwi", number: 4,price: 8,}
-  {name:"knife", number:1 ,price:40 ,}
+  { name: "banana", number: 5, price: 4 }, //product etot wes bolszoj (eto dla sebia)
+  { name: "shampoo", number: 2, price: 10 },
+  { name: "kiwi", number: 4, price: 8 },
+  { name: "knife", number: 1, price: 40 },
 ];
 
 // Распечатка чека на экран;
-function checkOfProd (arr){
-  for (const list of checkOfProd){
-    return `${list.name},${list.number},${list.price}`
+function printReceipt(arr) {
+  let result = "";
+  for (const product of arr) {
+    result += `Product: ${product.name} × ${product.number} - $${product.price}\n`;
   }
+  return result;
 }
-console.log(checkOfProd(receipt));
 
+console.log(printReceipt(receipt));
 
 // Подсчет общей суммы покупки;
-function totalAmount(arr){
-  for (let i=0; i<arr.length;i++){
-    for (const product of arr){
-      i +=product.number*product.price;
-    }
+function totalAmount(arr) {
+  let sum = 0;
+  for (const product of arr) {
+    sum = product.price * product.number;
   }
+  return sum;
 }
 console.log(totalAmount(receipt));
 
-
 // Получение самой дорогой покупки в чеке;
-function expensiveProduct(arr){
-  let max=0;
+function expensiveProduct(arr) {
+  let max = 0;
 
-  for (const goods of arr){
+  for (const product of arr) {
+    const cost = product.price * product.number;
 
+    if (cost > max) {
+      max = cost;
+    }
   }
+  return max;
 }
+console.log(expensiveProduct(receipt));
 // Подсчет средней стоимости одного товара в чеке.
+
+function averageCost(arr) {
+  for (const product of arr) {
+    const cost = (product.price * product.number) / number;
+  }
+  return cost;
+}
+console.log(averageCost(receipt));
 
 //3. Создать массив CSS-стилей (цвет, размер шрифта, выравнивание, подчеркивание и т. д.).
 
-
-
-
-
-
 //  Каждый элемент массива – это объект, состоящий из двух свойств: название стиля и значение стиля. Написать функцию,
 // которая принимает массив стилей и текст, и выводит этот текст с помощью document.write() в тегах <p></p>,
-function getArr(list) {
-  document.write("<ul>");
-  for (const item of list) {
-    document.write(`<p>${item}</p>`);
-  }
-  ("</ul>");
-}
+// function getArr(list) {
+//   document.write("<ul>");
+//   for (const item of list) {
+//     document.write(`<p>${item}</p>`);
+//   }
+//   ("</ul>");
+// }
 
-getArr(css);
-console.log(list);
-//   добавив в открывающий тег атрибут style со всеми стилями, перечисленными в массиве.
+// getArr(css);
+// console.log(list);
+// //   добавив в открывающий тег атрибут style со всеми стилями, перечисленными в массиве.
 
-//4.Создать массив аудиторий академии. Объект-аудитория состоит из названия, количества посадочных мест (от 10 до 20) и названия факультета,
-// для которого она предназначена. Написать несколько функций для работы с ним^
-const akademia = [
-  {
-    name: "Chemia organiczna",
-    places: 15,
-    facultyName: "Chemia analityczna",
-  },
-];
-// Вывод на экран всех аудиторий;
-function showAllAudience(arr) {
-  let str = arr.join(";");
-}
-console.log(str);
-// Вывод на экран аудиторий для указанного факультета;
-// Вывод на экран только тех аудиторий, которые подходят для переданной группы. Объект-группа состоит из названия, количества студентов и названия факультета;
-// Функция сортировки аудиторий по количеству мест;
-// Функция сортировки аудиторий по названию (по алфавиту).
+// //4.Создать массив аудиторий академии. Объект-аудитория состоит из названия, количества посадочных мест (от 10 до 20) и названия факультета,
+// // для которого она предназначена. Написать несколько функций для работы с ним^
+// const akademia = [
+//   {
+//     name: "Chemia organiczna",
+//     places: 15,
+//     facultyName: "Chemia analityczna",
+//   },
+// ];
+// // Вывод на экран всех аудиторий;
+// function showAllAudience(arr) {
+//   let str = arr.join(";");
+// }
+// console.log(str);
+// // Вывод на экран аудиторий для указанного факультета;
+// // Вывод на экран только тех аудиторий, которые подходят для переданной группы. Объект-группа состоит из названия, количества студентов и названия факультета;
+// // Функция сортировки аудиторий по количеству мест;
+// // Функция сортировки аудиторий по названию (по алфавиту).
