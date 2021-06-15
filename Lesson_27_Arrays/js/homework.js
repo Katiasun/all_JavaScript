@@ -101,7 +101,7 @@ console.log(printReceipt(receipt));
 function totalAmount(arr) {
   let sum = 0;
   for (const product of arr) {
-    sum = product.price * product.number;
+    sum += product.price * product.number;
   }
   return sum;
 }
@@ -121,12 +121,15 @@ function expensiveProduct(arr) {
   return max;
 }
 console.log(expensiveProduct(receipt));
+
 // Подсчет средней стоимости одного товара в чеке.
 
 function averageCost(arr) {
+  let sum = 0;
   for (const product of arr) {
-    const cost = (product.price * product.number) / number;
+    sum += product.price;
   }
+  let cost = sum / arr.length;
   return cost;
 }
 console.log(averageCost(receipt));
@@ -135,20 +138,20 @@ console.log(averageCost(receipt));
 
 //  Каждый элемент массива – это объект, состоящий из двух свойств: название стиля и значение стиля. Написать функцию,
 // которая принимает массив стилей и текст, и выводит этот текст с помощью document.write() в тегах <p></p>,
-// function getArr(list) {
-//   document.write("<ul>");
-//   for (const item of list) {
-//     document.write(`<p>${item}</p>`);
-//   }
-//   ("</ul>");
-// }
 
-// getArr(css);
-// console.log(list);
-// //   добавив в открывающий тег атрибут style со всеми стилями, перечисленными в массиве.
+let text =
+  "Garrett, a self-described extreme farmer, sounds confident in his chances. He is the seventh generation in his family to grow corn and graze cattle in western Iowa. “Everything we do is important,” he says. But when it comes to huge corn yields, there is one crucial element: carbon.";
+function showText(text) {
+  document.write(
+    `<p style="color:yellow; background-color:black; width:250px;">${text}</p>`
+  );
+}
+showText(text);
 
-// //4.Создать массив аудиторий академии. Объект-аудитория состоит из названия, количества посадочных мест (от 10 до 20) и названия факультета,
-// // для которого она предназначена. Написать несколько функций для работы с ним^
+//   добавив в открывающий тег атрибут style со всеми стилями, перечисленными в массиве.
+
+//4.Создать массив аудиторий академии. Объект-аудитория состоит из названия, количества посадочных мест (от 10 до 20) и названия факультета,
+// для которого она предназначена. Написать несколько функций для работы с ним^
 // const akademia = [
 //   {
 //     name: "Chemia organiczna",
@@ -156,12 +159,12 @@ console.log(averageCost(receipt));
 //     facultyName: "Chemia analityczna",
 //   },
 // ];
-// // Вывод на экран всех аудиторий;
+// Вывод на экран всех аудиторий;
 // function showAllAudience(arr) {
 //   let str = arr.join(";");
 // }
 // console.log(str);
-// // Вывод на экран аудиторий для указанного факультета;
-// // Вывод на экран только тех аудиторий, которые подходят для переданной группы. Объект-группа состоит из названия, количества студентов и названия факультета;
-// // Функция сортировки аудиторий по количеству мест;
-// // Функция сортировки аудиторий по названию (по алфавиту).
+// Вывод на экран аудиторий для указанного факультета;
+// Вывод на экран только тех аудиторий, которые подходят для переданной группы. Объект-группа состоит из названия, количества студентов и названия факультета;
+// Функция сортировки аудиторий по количеству мест;
+// Функция сортировки аудиторий по названию (по алфавиту).
