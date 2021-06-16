@@ -8,6 +8,32 @@
 //метод, вычисляющий длину окружности.
 //Продемонстрировать работу свойств и методов.
 
+class Circle {
+  constructor(r){
+      this.r=r;
+  }
+  get radius(){
+      return this.r;
+  }
+  set radius(){
+      return this.r;
+  }
+  get diametr(){
+      return this.r*2;
+  }
+  area(){
+      return Math.PI*this.r**2;
+  } 
+  circumference(){
+      return Math.PI*this.r*2;
+  }
+}
+
+let circle=new Circle;
+console.log(circle.radius());
+console.log(circle.diametr());
+console.log(circle.area());
+console.log(circle.circumference());
 //2) Реализовать класс, описывающий простой маркер. В классе должны быть следующие компоненты:
 
 //поле, которое хранит цвет маркера;
@@ -16,6 +42,10 @@
 //Реализовать класс, описывающий заправляющийся маркер, унаследовав его от простого маркера и добавив метод для заправки маркера.
 
 //Продемонстрировать работу написанных методов.
+
+
+
+
 
 //3) Реализовать класс Employee, описывающий работника, и создать массив работников банка.
 
