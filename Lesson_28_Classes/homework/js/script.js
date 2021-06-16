@@ -106,3 +106,12 @@ let arrEmployee=[
     new Employee("Mishel","White", "Maneher",2000),
     new Employee("John","Black", "Maneger", 2000),
 ]
+
+class EmpTable{
+    constructor(arr){
+        this.arr=arr;
+    }
+    getHtml(){
+        
+    }
+}
