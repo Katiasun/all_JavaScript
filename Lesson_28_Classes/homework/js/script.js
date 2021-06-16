@@ -83,8 +83,26 @@ class NewMarker{
 let marker= new NewMarker("#FF0066");
 let phrase=`для генерации HTML-кода таблицы со списком работников банка`;
 marker.print(phrase);
+
+
+
 //3) Реализовать класс Employee, описывающий работника, и создать массив работников банка.
 
 //Реализовать класс EmpTable для генерации HTML-кода таблицы со списком работников банка. Массив работников необходимо передавать через конструктор, а получать HTML-код с помощью метода getHtml().
 
 //Создать объект класса EmpTable и вывести на экран результат работы метода getHtml().
+
+class Employee{
+    constructor(name, lastName, department, salary){
+        this.name=name;
+        this.lastName=lastName;
+        this.department=department;
+        this.salary=salary;
+    }
+}
+
+let arrEmployee=[
+    new Employee("Sara","Brown","Maneger",2000),
+    new Employee("Mishel","White", "Maneher",2000),
+    new Employee("John","Black", "Maneger", 2000),
+]
