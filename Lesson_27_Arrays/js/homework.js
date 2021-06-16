@@ -139,6 +139,13 @@ console.log(averageCost(receipt));
 //  Каждый элемент массива – это объект, состоящий из двух свойств: название стиля и значение стиля. Написать функцию,
 // которая принимает массив стилей и текст, и выводит этот текст с помощью document.write() в тегах <p></p>,
 
+const arrCss= [
+  {color:"yellow", fontSize:18,textAlign:"center", textDecoration:"overline"}
+  {color:"green", fontSize:16,textAlign: "left", textDecoration: "underline"}
+  {color:"white", fontSize:15,textAlign:"right" , textDecoration: "underlight"}
+];
+
+
 let text =
   "Garrett, a self-described extreme farmer, sounds confident in his chances. He is the seventh generation in his family to grow corn and graze cattle in western Iowa. “Everything we do is important,” he says. But when it comes to huge corn yields, there is one crucial element: carbon.";
 function showText(text) {
