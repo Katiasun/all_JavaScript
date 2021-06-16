@@ -42,11 +42,47 @@ console.log(circle.circumference());
 //Реализовать класс, описывающий заправляющийся маркер, унаследовав его от простого маркера и добавив метод для заправки маркера.
 
 //Продемонстрировать работу написанных методов.
+class Marker{
+    constructor(color){
+        this.color = color;
+        this.ink = 100;
+    }
+    get markerProps(){
+        return[this.color, this.ink];
+    }
 
+    print(text) {
+        let result = '';
+        for (const character of text) {
+            if (this.ink === 0) {
+                break;
+            }
+            if (character !== ' ') {
+                this.ink -= 0.5;
+            }
+            result += character;
+        }
+        document.write(`<p style="color: ${this.color}">${result}</p>`)
+    }
 
+}
 
+const marker = new Marker('#000');
+marker.print(' EmpTable для генерации HTML-кода таблицы');
 
+class NewMarker{
+    fill(ink){
+        if (ink>100){
+            ink=100;
+        }else {
+            this.ink +=ink;
+        }
+    }
+}
 
+let marker= new NewMarker("#FF0066");
+let phrase=`для генерации HTML-кода таблицы со списком работников банка`;
+marker.print(phrase);
 //3) Реализовать класс Employee, описывающий работника, и создать массив работников банка.
 
 //Реализовать класс EmpTable для генерации HTML-кода таблицы со списком работников банка. Массив работников необходимо передавать через конструктор, а получать HTML-код с помощью метода getHtml().
