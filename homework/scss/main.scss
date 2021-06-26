@@ -52,13 +52,14 @@
   line-height: 90px;
   margin-bottom: 120px;
 }
-.slider {
-}
+
 .slide {
   position: relative;
   color: white;
   height: 400px;
   cursor: pointer;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
 }
 .slide:not(:last-child) {
   margin-right: 44px;
@@ -137,4 +138,7 @@
 }
 
 .slick-active {
+}
+.slick-cloned {
+  background-color: rgba(201, 241, 241, 0.3);
 }

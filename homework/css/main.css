@@ -61,6 +61,12 @@
   color: white;
   height: 400px;
   cursor: pointer;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 .slide:not(:last-child) {
@@ -153,5 +159,9 @@
   margin-left: 20px;
   right: 24px;
   top: 152px;
+}
+
+.slick-cloned {
+  background-color: rgba(201, 241, 241, 0.3);
 }
 /*# sourceMappingURL=main.css.map */
