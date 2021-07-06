@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  background-color: whitesmoke;
+  padding: 100px 0 160px 0;
+}
+
+.texts {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+  position: relative;
+  padding: 40px;
+  max-width: 1029px;
+  margin: 0 auto;
+
+  &__plus {
+    background: url("../img/plus.png") no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 31px;
+    right: 290px;
+  }
+
+  &__triangle {
+    background: url("../img/triangle.png") no-repeat;
+    width: 54px;
+    height: 54px;
+    position: absolute;
+    top: 183px;
+    left: 32px;
+  }
+}
+.subtitle {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.2em;
+  margin-bottom: 18px;
+}
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 86px;
+  line-height: 90px;
+  margin-bottom: 120px;
+}
+
+.slide {
+  position: relative;
+  color: white;
+  height: 400px;
+  cursor: pointer;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+.slide:not(:last-child) {
+  margin-right: 44px;
+}
+.slide-content h4 {
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 24px;
+}
+.slide-content p {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+}
+.slide:hover .slide-content {
+  opacity: 1;
+}
+.slide-content {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: left;
+  background-color: rgba(20, 226, 142, 0.9);
+  padding-left: 31px;
+  padding-bottom: 31px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+}
+.slide-1 {
+  background: url("../img/Sofa.png") center center no-repeat;
+  background-size: cover;
+}
+.slide-2 {
+  background: url("../img/Lamp.png") center center no-repeat;
+  background-size: cover;
+}
+.slide-3 {
+  background: url("../img/Bike.png") center center no-repeat;
+  background-size: cover;
+}
+.slide-4 {
+  background: url("../img/FedEx.png") center center no-repeat;
+  background-size: cover;
+}
+.slick-arrow {
+  position: absolute;
+  height: 96px;
+  width: 96px;
+  border: 0;
+  background: none;
+  font-size: 0;
+  cursor: pointer;
+  z-index: 900;
+}
+.slick-prev {
+  background: url("../img/Previous.png") center center no-repeat;
+  margin-right: 20px;
+  left: 24px;
+  top: 152px;
+}
+.slick-next {
+  background: url("../img/Next.png") center center no-repeat;
+  margin-left: 20px;
+  right: 24px;
+  top: 152px;
+}
+
+.slick-active {
+}
+.slick-cloned {
+  background-color: rgba(201, 241, 241, 0.3);
+}
